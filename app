@@ -20,7 +20,7 @@ function stop-mysql {
 
 
 function build {
-	docker build -t nodejs .
+	docker build -t strongloop .
 }
 
 function start-server {
@@ -30,7 +30,7 @@ function start-server {
 		-v $(pwd)/examples:/home/node \
 		--link $MYSQL_CONT_NAME:mysql \
 		-p 3000:3000 \
-		nodejs \
+		strongloop \
 		bash -c "cd /home/node/getting-started && npm install && node ."
 } 
 
