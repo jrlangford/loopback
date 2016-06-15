@@ -1,15 +1,10 @@
-# Strongloop
+# Loopback
 
-A container that is ready to execute node with strongloop
+A container that is ready to execute node with loopback
 
 ## Getting started
 
 A basic setup that uses a mysql container for storage is provided
-
-Build the docker image
-```
-$ ./app build
-```
 
 Run the example server
 ```
@@ -27,3 +22,9 @@ $ ./app stop
 ```
 
 Explore the API through `localhost:3000/explorer` in your browser.
+
+
+The image is available through the docker hub, you can also build it locally with the following command
+```
+$ ./app build
+```

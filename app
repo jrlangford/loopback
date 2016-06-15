@@ -20,7 +20,7 @@ function stop-mysql {
 
 
 function build {
-	docker build -t strongloop .
+	docker build -t jrlangford/loopback .
 }
 
 function start-server {
@@ -30,7 +30,7 @@ function start-server {
 		-v $(pwd)/examples:/home/node \
 		--link $MYSQL_CONT_NAME:mysql \
 		-p 3000:3000 \
-		strongloop \
+		jrlangford/loopback \
 		bash -c "cd /home/node/getting-started && npm install && node ."
 } 
 
